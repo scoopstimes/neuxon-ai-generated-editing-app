@@ -123,7 +123,7 @@ Open http://localhost:5173 in your browser.
 
 🧩 Project Structure
 
-pgsql
+```pgsql
 
 Copy code
 
@@ -142,46 +142,37 @@ banana-wrapper/
 ├── .env                   # API endpoint config
 ├── package.json
 └── README.md
+```
 
-📦 Showcase Examples
+## 📦 Showcase Examples
 
 The Showcase grid loads from src/data/showcase.json.
 
 Each example has:
+```json
 {
-
 "id": "ex-01",
-
 "title": "Cyberpunk Portrait",
-
 "description": "Neon city vibe with teal & magenta lights.",
-
 "tags": ["Cyberpunk", "Portrait"],
-
 "preset": "cyberpunk",
-
+"ingredients" : ["Car photo", "Road Photo"],
 "prompt": "Convert into neon cyberpunk style with vibrant colors.",
-
 "images": ["/showcase/portrait.jpg"]
-
 }
-
+```
 Use this example → fills upload + prompt automatically
-
 Copy prompt → copies the prompt text to clipboard
 
 ## 🎨 Styling
 
 UI Library: Shadcn UI + TailwindCSS
-
 Theme: Minimal dashboard with gray background and banana-yellow accent
 
 ## ⚠️ Notes
 
 This is an MVP playground. No auth, no billing, no history.
-
 All API costs are billed to your own Google account.
-
 Sample images in /public/showcase/ are for demo only.
 
 ## 🤝 Contributing
@@ -189,4 +180,4 @@ PRs and issues are welcome!
 Feel free to add new presets, showcase examples, or improve the UI.
 
 ## 📄 License
-MIT License © 2025 Banana Wrapper Contributors
+MIT License © 2025 Open Nano Pisang Contributors
