@@ -18,7 +18,6 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
-import type { EditRequestBody, EditSuccessResponse } from "@shared/api";
 
 interface LocalImage {
   file: File;
@@ -172,6 +171,34 @@ export default function Index() {
   const dropRef = useRef<HTMLDivElement>(null);
   const mainRef = useRef<HTMLDivElement>(null);
   const [allowShowcaseScroll, setAllowShowcaseScroll] = useState(false);
+  // Ganti state loadingProgress dengan loadingTime
+  const [loadingTime, setLoadingTime] = useState(0);
+
+  // Update useEffect untuk menghitung waktu
+  useEffect(() => {
+    if (isLoading) {
+      const startTime = Date.now();
+      const interval = setInterval(() => {
+        const elapsedSeconds = Math.floor((Date.now() - startTime) / 1000);
+        setLoadingTime(elapsedSeconds);
+      }, 1000);
+      return () => {
+        clearInterval(interval);
+        setLoadingTime(0);
+      };
+    }
+  }, [isLoading]);
+
+  // Update tampilan loading di bagian CardContent
+  <div className="space-y-4 animate-pulse">
+    <div className="h-[320px] bg-muted rounded-md flex items-center justify-center">
+      <div className="text-sm text-muted-foreground flex flex-col items-center gap-2">
+        <div className="loading-spinner h-6 w-6 border-2 border-current border-t-transparent rounded-full animate-spin" />
+        <div>Generating... {Math.floor(loadingTime)}s</div>
+      </div>
+    </div>
+  </div>;
+  const [loadingProgress, setLoadingProgress] = useState(0);
 
   useEffect(() => {
     const el = dropRef.current;
@@ -217,6 +244,8 @@ export default function Index() {
       ),
     [apiKey, prompt, images, isLoading, mode],
   );
+
+  // Tambahkan di bagian state declarations
 
   async function handleFiles(files: File[]) {
     const imgs: LocalImage[] = [];
@@ -311,9 +340,14 @@ export default function Index() {
     setPrompt((p) => (p ? `${p}\n\n${extra}` : extra));
   }
 
-  async function useExampleItem(item: { image: string; prompt: string }) {
+  async function useExampleItem(item: {
+    image: string;
+    prompt: string;
+    image_ingredients?: string[];
+  }) {
     try {
-      const r = await fetch(item.image);
+      const ingredientImage = item.image_ingredients?.[0] || item.image;
+      const r = await fetch(ingredientImage);
       const b = await r.blob();
       const file = new File([b], item.image.split("/").pop() || "example.png", {
         type: b.type || "image/png",
@@ -542,6 +576,17 @@ export default function Index() {
                         </Button>
                       </div>
                     </div>
+                  ) : isLoading ? (
+                    <div className="space-y-4 animate-pulse">
+                      <div className="h-[320px] bg-muted rounded-md flex items-center justify-center">
+                        <div className="text-sm text-muted-foreground flex flex-col items-center gap-2">
+                          <div className="loading-spinner h-6 w-6 border-2 border-current border-t-transparent rounded-full animate-spin" />
+                          <div>
+                            Generating... {Math.floor(loadingProgress)}%
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   ) : (
                     <div className="text-sm text-muted-foreground">
                       No result yet
@@ -590,7 +635,7 @@ export default function Index() {
                             size="sm"
                             onClick={() => useExampleItem(item)}
                           >
-                            Use this example
+                            Use this template
                           </Button>
                           <Button
                             size="sm"

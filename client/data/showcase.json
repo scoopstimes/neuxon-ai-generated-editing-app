@@ -1,40 +1,41 @@
 {
   "image": [
     {
+      "title": "Wanted Poster Edit",
+      "description": "Customize a One Piece style bounty poster: replace the character image, change the name, and set a new bounty amount.",
+      "tags": ["onepiece", "wanted-poster", "edit"],
+      "prompt": "Take this One Piece style wanted poster and replace luffy photo with the uploaded image. dont change style uploaded image for character. Change the name text to the [...], and update the bounty amount to $[...]. Keep the classic wanted poster design, font style, and paper texture consistent. Make result 9:16",
+      "ingredient": ["Character Picture", "Name", "Bounty Value"],
+      "image": "/showcase/eren-wanted.webp",
+      "image_ingredients": ["/showcase/onepiece-character.webp", "/showcase/onepiece-character.webp", "/showcase/onepiece-character.webp"]
+    },    
+    {
       "title": "Cyberpunk Banana",
       "description": "Neon-lit cyberpunk style with dramatic rim lighting.\n",
       "tags": ["cyberpunk", "neon"],
       "prompt": "Cyberpunk neon lights, rainy city reflections, dramatic rim light, high contrast",
       "ingredient" : ["Car Picture", "Prompt"], 
-      "image": "/showcase/cyber-punk-car.webp"
+      "image": "/showcase/cyber-punk-car.webp",
+      "image_ingredients": ["/showcase/cyber-punk-car.webp", "/showcase/cyber-punk-car.webp"]
+
     },
     {
-      "title": "No Background",
-      "description": "Clean cut-out on transparent background.",
-      "tags": ["remove-bg", "product"],
-      "prompt": "Remove background, clean subject cutout, high quality edges",
-      "image": "/showcase/removebg.svg"
+      "title": "Viral Figure Object",
+      "description": "Make your subject to 3D.",
+      "tags": ["3D", "product"],
+      "ingredient" : ["Car Picture", "Prompt"],
+      "prompt": "to create a 1/7 scale commercialized figure of the subject in the illustration,in a realistic style and enviroment. Place the figure on a computer desk, using a circular transparent acrylic base without any text. On the computer screen, display the ZBrush modeling process of the figure. Next to the computer screen, place a BANDAI-style toy packaging box printed with the original artwork.",
+      "image": "/showcase/3d-figure.webp",
+      "image_ingredients": ["/showcase/3d-figure.webp", "/showcase/3d-figure.webp"]
     },
     {
-      "title": "Editorial Ad",
-      "description": "Minimal ad-style composition with tasteful typography.",
-      "tags": ["editorial", "ad"],
-      "prompt": "Minimal editorial product shot, high contrast lighting, balanced composition",
-      "image": "/showcase/editorial.svg"
-    },
-    {
-      "title": "Tropical Scene",
-      "description": "Banana leafs, sunshine, warm tropical palette.",
-      "tags": ["tropical", "nature"],
-      "prompt": "Tropical sunshine, palm shadows, warm colors, natural textures",
-      "image": "/showcase/tropical.svg"
-    },
-    {
-      "title": "Isometric Packshot",
-      "description": "Clean isometric packshot on neutral gray.",
-      "tags": ["isometric", "packshot"],
-      "prompt": "Isometric packshot, neutral gray background, soft shadows, crisp edges",
-      "image": "/showcase/isometric.svg"
+      "title": "Anime Place Style",
+      "description": "Transform any landscape or place into anime-style background art.",
+      "tags": ["anime", "Palace", "place", "background"],
+      "prompt": "Convert this Place into anime background style with clean outlines, painterly sky, vibrant but balanced colors, and smooth cel shading. Preserve perspective, depth, and natural composition while giving it the look of an anime background plate.",
+      "ingredient": ["Landscape Photo", "Prompt"],
+      "image": "/showcase/anime-place.webp",
+      "image_ingredients": ["/showcase/anime-place.webp", "/showcase/anime-place.webp"]
     }
   ],
   "text": [
