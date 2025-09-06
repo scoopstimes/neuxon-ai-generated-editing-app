@@ -1,0 +1,90 @@
+{
+  "image": [
+    {
+      "title": "Banana Portrait",
+      "description": "Studio portrait with soft light and shallow depth of field.",
+      "tags": ["portrait", "studio"],
+      "prompt": "Studio portrait, soft light, 85mm lens look, f/1.8, clean background",
+      "image": "/showcase/portrait.svg"
+    },
+    {
+      "title": "Cyberpunk Banana",
+      "description": "Neon-lit cyberpunk style with dramatic rim lighting.\n",
+      "tags": ["cyberpunk", "neon"],
+      "prompt": "Cyberpunk style, neon lights, rain, dramatic rim lighting, Tokyo street vibes",
+      "image": "/showcase/cyberpunk.svg"
+    },
+    {
+      "title": "No Background",
+      "description": "Clean cut-out on transparent background.",
+      "tags": ["remove-bg", "product"],
+      "prompt": "Remove background, clean subject cutout, high quality edges",
+      "image": "/showcase/removebg.svg"
+    },
+    {
+      "title": "Editorial Ad",
+      "description": "Minimal ad-style composition with tasteful typography.",
+      "tags": ["editorial", "ad"],
+      "prompt": "Minimal editorial product shot, high contrast lighting, balanced composition",
+      "image": "/showcase/editorial.svg"
+    },
+    {
+      "title": "Tropical Scene",
+      "description": "Banana leafs, sunshine, warm tropical palette.",
+      "tags": ["tropical", "nature"],
+      "prompt": "Tropical sunshine, palm shadows, warm colors, natural textures",
+      "image": "/showcase/tropical.svg"
+    },
+    {
+      "title": "Isometric Packshot",
+      "description": "Clean isometric packshot on neutral gray.",
+      "tags": ["isometric", "packshot"],
+      "prompt": "Isometric packshot, neutral gray background, soft shadows, crisp edges",
+      "image": "/showcase/isometric.svg"
+    }
+  ],
+  "text": [
+    {
+      "title": "Banana Island",
+      "description": "Whimsical island made of bananas in a turquoise sea.",
+      "tags": ["fantasy", "island"],
+      "prompt": "A whimsical tropical island shaped like a banana, crystal turquoise water, sunny sky, cinematic lighting",
+      "image": "/showcase/t2i-island.svg"
+    },
+    {
+      "title": "Banana Bot",
+      "description": "Cute robot made from banana shapes, glossy finish.",
+      "tags": ["robot", "cute"],
+      "prompt": "Cute banana-shaped robot with glossy yellow shell and chrome joints, studio lighting, high detail",
+      "image": "/showcase/t2i-robot.svg"
+    },
+    {
+      "title": "Poster Design",
+      "description": "Minimal poster with bold banana graphic and modern typography.",
+      "tags": ["poster", "minimal"],
+      "prompt": "Minimal poster design featuring a large flat banana graphic, modern sans-serif typography, negative space",
+      "image": "/showcase/t2i-poster.svg"
+    },
+    {
+      "title": "Banana City",
+      "description": "Futuristic city where buildings resemble bananas.",
+      "tags": ["city", "futuristic"],
+      "prompt": "Futuristic cityscape at dusk with skyscrapers subtly shaped like bananas, neon accents, moody atmosphere",
+      "image": "/showcase/t2i-city.svg"
+    },
+    {
+      "title": "Macro Banana",
+      "description": "Hyper-detailed macro shot of banana texture.",
+      "tags": ["macro", "texture"],
+      "prompt": "Ultra-detailed macro photograph of banana peel texture with dramatic side lighting",
+      "image": "/showcase/t2i-macro.svg"
+    },
+    {
+      "title": "Banana Spaceship",
+      "description": "Sleek spaceship silhouette inspired by a banana.",
+      "tags": ["spaceship", "sci-fi"],
+      "prompt": "Sleek banana-shaped spaceship flying through a starfield, cinematic rim light, volumetric fog",
+      "image": "/showcase/t2i-ship.svg"
+    }
+  ]
+}
