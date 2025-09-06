@@ -132,7 +132,7 @@ function Sidebar({
       </nav>
       <div className="mt-auto pt-2">
         <a
-          href="https://github.com/"
+          href="https://github.com/mfatihrabbani/open-nano-pisang"
           target="_blank"
           rel="noreferrer"
           className="text-sm text-primary hover:underline"
@@ -368,7 +368,7 @@ export default function Index() {
             </Button>
           </header>
 
-          <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 min-h-0">
+          <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 min-h-0 overflow-y-auto">
             <div className="xl:col-span-2 space-y-6">
               <Card>
                 <CardHeader>
@@ -553,18 +553,13 @@ export default function Index() {
 
             <div className="xl:col-span-1 flex flex-col min-h-0">
               <Card className="h-full flex flex-col">
-                <CardHeader className="sticky top-0 z-10 bg-card/90 backdrop-blur supports-[backdrop-filter]:bg-card/60">
+                <CardHeader>
                   <CardTitle>Showcase</CardTitle>
                   <CardDescription>
                     Use an example or copy its prompt
                   </CardDescription>
                 </CardHeader>
-                <CardContent
-                  className={cn(
-                    "grid gap-4 flex-1 pr-2",
-                    allowShowcaseScroll ? "overflow-y-auto" : "overflow-hidden",
-                  )}
-                >
+                <CardContent className="grid gap-4 flex-1 pr-2 overflow-y-auto">
                   {(mode === "image"
                     ? (showcaseData as any).image
                     : (showcaseData as any).text

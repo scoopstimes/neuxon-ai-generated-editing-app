@@ -1,18 +1,12 @@
 {
   "image": [
     {
-      "title": "Banana Portrait",
-      "description": "Studio portrait with soft light and shallow depth of field.",
-      "tags": ["portrait", "studio"],
-      "prompt": "Studio portrait, soft light, 85mm lens look, f/1.8, clean background",
-      "image": "/showcase/portrait.svg"
-    },
-    {
       "title": "Cyberpunk Banana",
       "description": "Neon-lit cyberpunk style with dramatic rim lighting.\n",
       "tags": ["cyberpunk", "neon"],
-      "prompt": "Cyberpunk style, neon lights, rain, dramatic rim lighting, Tokyo street vibes",
-      "image": "/showcase/cyberpunk.svg"
+      "prompt": "Cyberpunk neon lights, rainy city reflections, dramatic rim light, high contrast",
+      "ingredient" : ["Car Picture", "Prompt"], 
+      "image": "/showcase/cyber-punk-car.webp"
     },
     {
       "title": "No Background",
