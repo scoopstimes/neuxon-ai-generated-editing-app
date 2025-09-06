@@ -2,6 +2,7 @@
 
 Open Nano Pisang is an **open-source React demo app** that wraps **Google Banana (Gemini 2.5 Flash Image Editing)** into a simple dashboard UI. 
 You can upload images, enter custom prompts, pick from style presets, and even try ready-made showcase examples — all with **your own API key**.
+
 ![Dashboard](/public/dashboard.png)
 ---
 
