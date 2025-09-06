@@ -24,8 +24,8 @@ You can upload images, enter custom prompts, pick from style presets, and even t
 
 ### 1. Clone the Repo
 ```bash
-git clone https://github.com/yourusername/banana-wrapper.git
-cd banana-wrapper
+git clone https://github.com/mfatihrabbani/open-nano-pisang.git
+cd open-nano-pisang
 ```
 
 ### 2. Install Dependencies
@@ -98,23 +98,17 @@ cd banana-wrapper
 
 2. Install Dependencies
 
-bash
-
+```bash
 Copy code
-
 npm install
-
 # or
-
 yarn install
+```
 
 3. Set Up Environment
 
 
-
-4. Run Locally
-
-bash
+```bash
 
 Copy code
 
@@ -123,6 +117,7 @@ npm run dev
 # or
 
 yarn dev
+```
 
 Open http://localhost:5173 in your browser.
 
