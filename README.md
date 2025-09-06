@@ -47,10 +47,7 @@ Open http://localhost:8081 in your browser.
 ## 🧩 Project Structure
 
 ```pgsql
-
-Copy code
-
-banana-wrapper/
+open-nano-pisang/
 
 ├── public/
 │   └── showcase/          # Sample images for demo
