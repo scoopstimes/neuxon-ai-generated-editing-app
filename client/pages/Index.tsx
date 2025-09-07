@@ -100,15 +100,15 @@ function Sidebar({
   return (
     <aside className="hidden md:flex md:flex-col w-64 shrink-0 border-r bg-sidebar p-6 gap-4">
       <div className="flex items-center gap-2">
-        <div className="h-9 w-9 rounded-md bg-primary/20 grid place-items-center">
-          <span className="text-xl">🍌</span>
+        <div className="h-9 w-9 rounded-md grid place-items-center">
+          <img  src="https://januarzzz-ai-seven.vercel.app/neuxon.png"></img>
         </div>
         <div>
           <div className="font-extrabold tracking-tight text-lg">
-            Open Nano Pisang
+            Neuxon Generate & Editing Image
           </div>
           <div className="text-xs text-muted-foreground">
-            Open-source image demo
+            Neuxon with N-Flash 2.5
           </div>
         </div>
       </div>
@@ -129,16 +129,6 @@ function Sidebar({
           Text-to-Image
         </Button>
       </nav>
-      <div className="mt-auto pt-2">
-        <a
-          href="https://github.com/mfatihrabbani/open-nano-pisang"
-          target="_blank"
-          rel="noreferrer"
-          className="text-sm text-primary hover:underline"
-        >
-          GitHub ↗
-        </a>
-      </div>
     </aside>
   );
 }
@@ -161,12 +151,12 @@ function ModelInput({
 }
 
 export default function Index() {
-  const [apiKey, setApiKey] = useLocalStorage("bw_api_key", "");
+  const apiKey = "AIzaSyDXgSANyZJ7tAZn-goXJcqXiAGAcqthPK0";
   const [prompt, setPrompt] = useState("");
   const [images, setImages] = useState<LocalImage[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [resultUrls, setResultUrls] = useState<string[] | null>(null);
-  const [model, setModel] = useState<string>("gemini-2.5-flash-image-preview");
+  const [model, setModel] = useState<string>("neuxon-flash-2.5-image-generated");
   const [mode, setMode] = useState<"image" | "text">("image");
   const dropRef = useRef<HTMLDivElement>(null);
   const mainRef = useRef<HTMLDivElement>(null);
@@ -284,7 +274,7 @@ export default function Index() {
       const newPrompt = [{ text: prompt }, ...imageParts];
 
       const response = await ai.models.generateContent({
-        model: "gemini-2.5-flash-image-preview",
+        model: "neuxon-flash-2.5-image-generated",
         contents: newPrompt,
       });
 
@@ -381,50 +371,25 @@ export default function Index() {
           <header className="flex items-center justify-between mb-6">
             <div>
               <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight">
-                Open Nano Pisang
+                Neuxon Generate & Editing Image
               </h1>
               <p className="text-sm text-muted-foreground">
-                Image editing demo with Gemini proxy
+                Image editing with Neuxon AI
               </p>
             </div>
-            <Button
-              asChild
-              variant="secondary"
-              className="hidden md:inline-flex"
-            >
-              <a
-                href="https://github.com/mfatihrabbani/open-nano-pisang"
-                target="_blank"
-                rel="noreferrer"
-              >
-                GitHub
-              </a>
-            </Button>
+          
           </header>
 
           <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 min-h-0 overflow-y-auto">
             <div className="xl:col-span-2 space-y-6">
-              <Card>
-                <CardHeader>
-                  <CardTitle>API key</CardTitle>
-                  <CardDescription>
-                    Stored locally in your browser
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="flex flex-col gap-3 md:flex-row">
-                  <Input
-                    type="password"
-                    placeholder="Enter your Gemini API key"
-                    value={apiKey}
-                    onChange={(e) => setApiKey(e.target.value)}
-                  />
-                  <ModelInput model={model} setModel={setModel} />
-                  <Button variant="outline" onClick={() => setApiKey("")}>
-                    Clear
-                  </Button>
-                </CardContent>
-              </Card>
-
+            <Card>
+  <CardHeader>
+    <CardTitle>Model</CardTitle>
+    <CardDescription>
+     N-Flash 2.5
+    </CardDescription>
+  </CardHeader>
+</Card>
               {mode === "image" && (
                 <Card>
                   <CardHeader>
@@ -562,7 +527,7 @@ export default function Index() {
                           <Button asChild key={index}>
                             <a
                               href={url}
-                              download={`banana-wrapper-result-${index}.png`}
+                              download={`neuxon-results-${index}.png`}
                             >
                               Download {index + 1}
                             </a>
