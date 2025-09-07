@@ -360,7 +360,8 @@ export default function Index() {
       }
       setPrompt(item.prompt);
       window.scrollTo({ top: 0, behavior: "smooth" });
-    } catch {
+    } catch (e: any) {
+      console.error(e);
       toast.error("Failed to load example");
     }
   }

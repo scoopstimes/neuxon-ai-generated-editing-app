@@ -7,7 +7,7 @@
       "prompt": "Take this One Piece style wanted poster and replace luffy photo with the uploaded image. dont change style uploaded image for character. Change the name text to the [...], and update the bounty amount to $[...]. Keep the classic wanted poster design, font style, and paper texture consistent. Make result 9:16",
       "ingredient": ["Character Picture", "Name", "Bounty Value"],
       "image": "/showcase/eren-wanted.webp",
-      "image_ingredients": ["/showcase/onepiece-character.webp", "/showcase/onepiece-character.webp", "/showcase/onepiece-character.webp"]
+      "image_ingredients": ["/showcase/wanted.webp", "/showcase/eren.webp"]
     },    
     {
       "title": "Cyberpunk Banana",
