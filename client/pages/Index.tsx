@@ -248,7 +248,7 @@ export default function Index() {
     }
     const merged = [...images, ...imgs].slice(0, MAX_FILES);
     if (merged.length === 0) {
-      toast.error("Please add 1–5 image");
+      toast.error("Please add 1–5 image files");
     }
     setImages(merged);
   }
