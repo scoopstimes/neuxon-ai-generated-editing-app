@@ -105,7 +105,7 @@ function Sidebar({
         </div>
         <div>
           <div className="font-extrabold tracking-tight text-lg">
-            Banana Wrapper
+            Open Nano Pisang
           </div>
           <div className="text-xs text-muted-foreground">
             Open-source image demo
@@ -189,15 +189,6 @@ export default function Index() {
     }
   }, [isLoading]);
 
-  // Update tampilan loading di bagian CardContent
-  <div className="space-y-4 animate-pulse">
-    <div className="h-[320px] bg-muted rounded-md flex items-center justify-center">
-      <div className="text-sm text-muted-foreground flex flex-col items-center gap-2">
-        <div className="loading-spinner h-6 w-6 border-2 border-current border-t-transparent rounded-full animate-spin" />
-        <div>Generating... {Math.floor(loadingTime)}s</div>
-      </div>
-    </div>
-  </div>;
   const [loadingProgress, setLoadingProgress] = useState(0);
 
   useEffect(() => {
@@ -244,8 +235,6 @@ export default function Index() {
       ),
     [apiKey, prompt, images, isLoading, mode],
   );
-
-  // Tambahkan di bagian state declarations
 
   async function handleFiles(files: File[]) {
     const imgs: LocalImage[] = [];
@@ -346,15 +335,21 @@ export default function Index() {
     image_ingredients?: string[];
   }) {
     try {
-      const ingredientImage = item.image_ingredients?.[0] || item.image;
-      const r = await fetch(ingredientImage);
-      const b = await r.blob();
-      const file = new File([b], item.image.split("/").pop() || "example.png", {
-        type: b.type || "image/png",
-      });
-      const info = await fileToImageInfo(file);
+      const imagesToLoad = item.image_ingredients || [item.image];
+      const loadedImages: LocalImage[] = [];
+
+      for (const imgUrl of imagesToLoad) {
+        const r = await fetch(imgUrl);
+        const b = await r.blob();
+        const file = new File([b], imgUrl.split("/").pop() || "example.png", {
+          type: b.type || "image/png",
+        });
+        const info = await fileToImageInfo(file);
+        loadedImages.push(info);
+      }
+
       if (mode === "image") {
-        setImages([info]);
+        setImages(loadedImages);
       } else {
         setImages([]);
       }
@@ -386,7 +381,7 @@ export default function Index() {
           <header className="flex items-center justify-between mb-6">
             <div>
               <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight">
-                Banana Wrapper
+                Open Nano Pisang
               </h1>
               <p className="text-sm text-muted-foreground">
                 Image editing demo with Gemini proxy
@@ -397,7 +392,11 @@ export default function Index() {
               variant="secondary"
               className="hidden md:inline-flex"
             >
-              <a href="https://github.com/" target="_blank" rel="noreferrer">
+              <a
+                href="https://github.com/mfatihrabbani/open-nano-pisang"
+                target="_blank"
+                rel="noreferrer"
+              >
                 GitHub
               </a>
             </Button>
@@ -582,9 +581,7 @@ export default function Index() {
                       <div className="h-[320px] bg-muted rounded-md flex items-center justify-center">
                         <div className="text-sm text-muted-foreground flex flex-col items-center gap-2">
                           <div className="loading-spinner h-6 w-6 border-2 border-current border-t-transparent rounded-full animate-spin" />
-                          <div>
-                            Generating... {Math.floor(loadingProgress)}%
-                          </div>
+                          <div>Generating... {Math.floor(loadingTime)}s</div>
                         </div>
                       </div>
                     </div>

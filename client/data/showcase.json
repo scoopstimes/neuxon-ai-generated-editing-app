@@ -4,10 +4,10 @@
       "title": "Wanted Poster Edit",
       "description": "Customize a One Piece style bounty poster: replace the character image, change the name, and set a new bounty amount.",
       "tags": ["onepiece", "wanted-poster", "edit"],
-      "prompt": "Take this One Piece style wanted poster and replace luffy photo with the uploaded image. dont change style uploaded image for character. Change the name text to the [...], and update the bounty amount to $[...]. Keep the classic wanted poster design, font style, and paper texture consistent. Make result 9:16",
+      "prompt": "Take this One Piece style wanted poster and replace luffy photo with the uploaded image. dont change style uploaded image for character. Change the name text to the [...], and update the bounty amount to $[...]. Keep the classic wanted poster design, font style, and paper texture consistent. Make result 9:16. Make only one, and remove background",
       "ingredient": ["Character Picture", "Name", "Bounty Value"],
       "image": "/showcase/eren-wanted.webp",
-      "image_ingredients": ["/showcase/wanted.webp", "/showcase/eren.webp"]
+      "image_ingredients": ["/ingredients/wanted.webp", "/ingredients/eren.webp"]
     },    
     {
       "title": "Cyberpunk Banana",
@@ -16,7 +16,7 @@
       "prompt": "Cyberpunk neon lights, rainy city reflections, dramatic rim light, high contrast",
       "ingredient" : ["Car Picture", "Prompt"], 
       "image": "/showcase/cyber-punk-car.webp",
-      "image_ingredients": ["/showcase/cyber-punk-car.webp", "/showcase/cyber-punk-car.webp"]
+      "image_ingredients": ["/ingredients/mclaren.webp"]
 
     },
     {
@@ -26,7 +26,7 @@
       "ingredient" : ["Car Picture", "Prompt"],
       "prompt": "to create a 1/7 scale commercialized figure of the subject in the illustration,in a realistic style and enviroment. Place the figure on a computer desk, using a circular transparent acrylic base without any text. On the computer screen, display the ZBrush modeling process of the figure. Next to the computer screen, place a BANDAI-style toy packaging box printed with the original artwork.",
       "image": "/showcase/3d-figure.webp",
-      "image_ingredients": ["/showcase/3d-figure.webp", "/showcase/3d-figure.webp"]
+      "image_ingredients": ["/ingredients/mclaren.webp"]
     },
     {
       "title": "Anime Place Style",
@@ -35,7 +35,7 @@
       "prompt": "Convert this Place into anime background style with clean outlines, painterly sky, vibrant but balanced colors, and smooth cel shading. Preserve perspective, depth, and natural composition while giving it the look of an anime background plate.",
       "ingredient": ["Landscape Photo", "Prompt"],
       "image": "/showcase/anime-place.webp",
-      "image_ingredients": ["/showcase/anime-place.webp", "/showcase/anime-place.webp"]
+      "image_ingredients": ["/ingredients/mount-fuji.webp"]
     }
   ],
   "text": [
